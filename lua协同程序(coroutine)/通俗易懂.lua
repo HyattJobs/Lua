@@ -1,0 +1,6 @@
+co = coroutine.create(function(a)
+	local r = coroutine.yield(a+1)
+	print("r="..r)
+	end)
+status,r = coroutine.resume(co,1)
+coroutine.resume(co.100)
